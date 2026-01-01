@@ -1,44 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Us</title>
+    <title>About Us – Anand-Swami Shikshan Prasarak Mandal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Adarsh Public School, our vision, mission and values.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
     <h1 class="lang mr">शाळेबद्दल</h1>
     <h1 class="lang en">About Our School</h1>
+
+    <div style="margin-top:10px;">
+        <button onclick="setLanguage('mr')">मराठी</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
 </header>
 
+<!-- ================= NAVIGATION ================= -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">Home / मुख्यपृष्ठ</a>
+    <a href="about.html">About / शाळेबद्दल</a>
+    <a href="admissions.html">Admissions / प्रवेश</a>
+    <a href="gallery.html">Gallery / छायाचित्रे</a>
+    <a href="contact.html">Contact / संपर्क</a>
 </nav>
 
+<!-- ================= ABOUT CONTENT ================= -->
 <div class="container">
 
-<p class="lang mr">
-आदर्श पब्लिक स्कूल ही गुणवत्तापूर्ण शिक्षण देणारी संस्था आहे.
-</p>
+    <!-- INTRO -->
+    <h2 class="lang mr">आनंद-स्वामी शिक्षण प्रसारक मंडळची ओळख</h2>
+    <h2 class="lang en">Introduction</h2>
 
-<p class="lang en">
-Adarsh Public School is an institution committed to quality education.
-</p>
+    <p class="lang mr">
+        आनंद-स्वामी शिक्षण प्रसारक मंडळ ही एक नामांकित शैक्षणिक संस्था असून
+        विद्यार्थ्यांच्या शैक्षणिक, सामाजिक व नैतिक विकासावर भर देण्यात येतो.
+    </p>
+
+    <p class="lang en">
+        Anand-Swami Shikshan Prasarak Mandal is a reputed educational institution focusing on
+        academic excellence along with moral and social development.
+    </p>
+
+    <!-- VISION -->
+    <h3 class="lang mr">आमची दृष्टी</h3>
+    <h3 class="lang en">Our Vision</h3>
+
+    <p class="lang mr">
+        विद्यार्थ्यांना जबाबदार, आत्मविश्वासू आणि सक्षम नागरिक बनवणे.
+    </p>
+
+    <p class="lang en">
+        To nurture responsible, confident, and capable citizens of tomorrow.
+    </p>
+
+    <!-- MISSION -->
+    <h3 class="lang mr">आमचे ध्येय</h3>
+    <h3 class="lang en">Our Mission</h3>
+
+    <ul class="lang mr">
+        <li>गुणवत्तापूर्ण शिक्षण देणे</li>
+        <li>शिस्त व संस्कार जोपासणे</li>
+        <li>विद्यार्थ्यांचा सर्वांगीण विकास</li>
+    </ul>
+
+    <ul class="lang en">
+        <li>Deliver quality education</li>
+        <li>Inculcate discipline and values</li>
+        <li>Ensure holistic student development</li>
+    </ul>
+
+    <!-- INFRASTRUCTURE -->
+    <h3 class="lang mr">शालेय सुविधा</h3>
+    <h3 class="lang en">School Infrastructure</h3>
+
+    <p class="lang mr">
+        प्रशस्त वर्गखोल्या, ग्रंथालय, संगणक प्रयोगशाळा आणि खेळाची मैदाने उपलब्ध आहेत.
+    </p>
+
+    <p class="lang en">
+        The school offers spacious classrooms, library, computer lab, and playground facilities.
+    </p>
 
 </div>
 
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p class="lang mr">© २०२६ आनंद-स्वामी शिक्षण प्रसारक मंडळ. सर्व हक्क राखीव.</p>
+    <p class="lang en">© 2026 Anand-Swami Shikshan Prasarak Mandal. All rights reserved.</p>
+</footer>
+
+<!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
-function setLanguage(lang){localStorage.setItem("language",lang);applyLanguage();}
-function applyLanguage(){
-let lang=localStorage.getItem("language")||"mr";
-document.querySelectorAll(".lang").forEach(el=>{
-el.style.display=el.classList.contains(lang)?"block":"none";
-});}
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+    applyLanguage();
+}
+
+function applyLanguage() {
+    let lang = localStorage.getItem("language") || "mr";
+    document.querySelectorAll(".lang").forEach(el => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+    });
+}
 applyLanguage();
 </script>
 

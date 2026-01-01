@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Gallery</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <title>Gallery – Anand-Swami Shikshan Prasarak Mandal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-<h1 class="lang mr">छायाचित्रे</h1>
-<h1 class="lang en">Gallery</h1>
+    <h1 class="lang mr">छायाचित्र दालन</h1>
+    <h1 class="lang en">Photo Gallery</h1>
+
+    <div style="margin-top:10px;">
+        <button onclick="setLanguage('mr')">मराठी</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
 </header>
 
+<!-- ================= NAV ================= -->
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="admissions.html">Admissions</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home / मुख्यपृष्ठ</a>
+    <a href="about.html">About / शाळेबद्दल</a>
+    <a href="admissions.html">Admissions / प्रवेश</a>
+    <a href="gallery.html">Gallery / छायाचित्रे</a>
+    <a href="contact.html">Contact / संपर्क</a>
 </nav>
 
+<!-- ================= GALLERY CONTENT ================= -->
 <div class="container">
-<img src="images/school1.jpg" width="100%">
+
+    <p class="lang mr">
+        शाळेतील विविध उपक्रम, कार्यक्रम आणि विद्यार्थ्यांचे क्षणचित्रे.
+    </p>
+
+    <p class="lang en">
+        Glimpses of school activities, events, and student moments.
+    </p>
+
+    <!-- IMAGE GRID -->
+    <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="School Activity">
+        <img src="images/gallery2.jpg" alt="Annual Function">
+        <img src="images/gallery3.jpg" alt="Sports Day">
+        <img src="images/gallery4.jpg" alt="Classroom Activity">
+        <img src="images/gallery5.jpg" alt="Independence Day">
+        <img src="images/gallery6.jpg" alt="Prize Distribution">
+    </div>
+
 </div>
 
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p class="lang mr">© २०२६ आनंद-स्वामी शिक्षण प्रसारक मंडळ. सर्व हक्क राखीव.</p>
+    <p class="lang en">© 2026 Anand-Swami Shikshan Prasarak Mandal. All rights reserved.</p>
+</footer>
+
+<!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
-function setLanguage(lang){localStorage.setItem("language",lang);applyLanguage();}
-function applyLanguage(){
-let lang=localStorage.getItem("language")||"mr";
-document.querySelectorAll(".lang").forEach(el=>{
-el.style.display=el.classList.contains(lang)?"block":"none";
-});}
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+    applyLanguage();
+}
+
+function applyLanguage() {
+    let lang = localStorage.getItem("language") || "mr";
+    document.querySelectorAll(".lang").forEach(el => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+    });
+}
 applyLanguage();
 </script>
 

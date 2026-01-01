@@ -87,3 +87,14 @@ header p {
     color: white;
 }
 .lang { display: none; }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 6px;
+}
+

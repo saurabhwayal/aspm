@@ -1,39 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <title>Contact Us – Anand-Swami Shikshan Prasarak Mandal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-<h1 class="lang mr">संपर्क</h1>
-<h1 class="lang en">Contact Us</h1>
+    <h1 class="lang mr">संपर्क साधा</h1>
+    <h1 class="lang en">Contact Us</h1>
+
+    <div style="margin-top:10px;">
+        <button onclick="setLanguage('mr')">मराठी</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
 </header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="admissions.html">Admissions</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home / मुख्यपृष्ठ</a>
+    <a href="about.html">About / शाळेबद्दल</a>
+    <a href="admissions.html">Admissions / प्रवेश</a>
+    <a href="gallery.html">Gallery / छायाचित्रे</a>
+    <a href="contact.html">Contact / संपर्क</a>
 </nav>
 
 <div class="container">
 
-<p class="lang mr">फोन: ९८७६५४३२१०</p>
-<p class="lang en">Phone: 9876543210</p>
+    <!-- ADDRESS -->
+    <h2 class="lang mr">शाळेचा पत्ता</h2>
+    <h2 class="lang en">School Address</h2>
+
+    <p class="lang mr">
+        आनंद-स्वामी शिक्षण प्रसारक मंडळ ,<br>
+        वॉर्ड नं. ५,<br>
+        मुख्य रस्ता, सरकारी दवाखाना जवळ ,<br>
+        देऊळगाव मही – 443206,<br>
+        महाराष्ट्र, भारत
+    </p>
+
+    <p class="lang en">
+        Anand-Swami Shikshan Prasarak Mandal,<br>
+        Ward No. 5,<br>
+        Main Road, Near Sarkari Dawakhana,<br>
+        Deulgaon Mahi – 443206,<br>
+        Maharashtra, India
+    </p>
+
+    <!-- CONTACT DETAILS -->
+    <h3 class="lang mr">संपर्क तपशील</h3>
+    <h3 class="lang en">Contact Details</h3>
+
+    <p class="lang mr">
+        फोन: ९८७६५४३२१०<br>
+        ईमेल: Anand-SwamiShikshanPrasarakMandal@gmail.com
+    </p>
+
+    <p class="lang en">
+        Phone: 9876543210<br>
+        Email: Anand-SwamiShikshanPrasarakMandal@gmail.com
+    </p>
+
+    <!-- GOOGLE MAP -->
+    <h3 class="lang mr">नकाशा स्थान</h3>
+    <h3 class="lang en">Map Location</h3>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.0866504041493!2d76.18188943550727!3d20.091581499941825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bda6d2188efb1b3%3A0x80afb5729019fbf2!2z4KS44KSC4KSkIOCknOCljeCknuCkvuCkqOClh-CktuCljeCkteCksCDgpKjgpL_gpLXgpL7gpLjgpYAg4KSF4KSq4KSC4KSXIOCkteCkv-CkpuCljeCkr-CkvuCksuCkryDgpKbgpYfgpIrgpLPgpJfgpL7gpLUg4KSu4KS54KWA!5e0!3m2!1sen!2sin!4v1767285461411!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
 
+<footer>
+    <p class="lang mr">© २०२६ आनंद-स्वामी शिक्षण प्रसारक मंडळ. सर्व हक्क राखीव.</p>
+    <p class="lang en">© 2026 Anand-Swami Shikshan Prasarak Mandal. All rights reserved.</p>
+</footer>
+
 <script>
-function setLanguage(lang){localStorage.setItem("language",lang);applyLanguage();}
-function applyLanguage(){
-let lang=localStorage.getItem("language")||"mr";
-document.querySelectorAll(".lang").forEach(el=>{
-el.style.display=el.classList.contains(lang)?"block":"none";
-});}
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+    applyLanguage();
+}
+
+function applyLanguage() {
+    let lang = localStorage.getItem("language") || "mr";
+    document.querySelectorAll(".lang").forEach(el => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+    });
+}
 applyLanguage();
 </script>
 

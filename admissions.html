@@ -1,39 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Admissions</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <title>Admissions – Anand-Swami Shikshan Prasarak Mandal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admissions open at Adarsh Public School. Apply now.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-<h1 class="lang mr">प्रवेश माहिती</h1>
-<h1 class="lang en">Admissions</h1>
+    <h1 class="lang mr">प्रवेश प्रक्रिया</h1>
+    <h1 class="lang en">Admission Process</h1>
+
+    <div style="margin-top:10px;">
+        <button onclick="setLanguage('mr')">मराठी</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
 </header>
 
+<!-- ================= NAVIGATION ================= -->
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="admissions.html">Admissions</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html">Home / मुख्यपृष्ठ</a>
+    <a href="about.html">About / शाळेबद्दल</a>
+    <a href="admissions.html">Admissions / प्रवेश</a>
+    <a href="gallery.html">Gallery / छायाचित्रे</a>
+    <a href="contact.html">Contact / संपर्क</a>
 </nav>
 
+<!-- ================= ADMISSIONS CONTENT ================= -->
 <div class="container">
 
-<p class="lang mr">शैक्षणिक वर्ष २०२६–२७ साठी प्रवेश सुरू आहेत.</p>
-<p class="lang en">Admissions are open for the academic year 2026–27.</p>
+    <!-- ADMISSION NOTICE -->
+    <h2 class="lang mr">प्रवेश सूचना</h2>
+    <h2 class="lang en">Admission Notice</h2>
+
+    <p class="lang mr">
+        शैक्षणिक वर्ष २०२६–२७ साठी नर्सरी ते इयत्ता दहावीपर्यंत प्रवेश सुरू आहेत.
+    </p>
+
+    <p class="lang en">
+        Admissions are open for Nursery to Standard X for the academic year 2026–27.
+    </p>
+
+    <!-- ELIGIBILITY -->
+    <h3 class="lang mr">प्रवेश पात्रता</h3>
+    <h3 class="lang en">Eligibility Criteria</h3>
+
+    <ul class="lang mr">
+        <li>नर्सरी – वय ३ वर्षे पूर्ण</li>
+        <li>इयत्ता पहिली – वय ६ वर्षे पूर्ण</li>
+        <li>मागील शाळेचा दाखला आवश्यक</li>
+    </ul>
+
+    <ul class="lang en">
+        <li>Nursery – Completed 3 years</li>
+        <li>Std I – Completed 6 years</li>
+        <li>Previous school leaving certificate required</li>
+    </ul>
+
+    <!-- REQUIRED DOCUMENTS -->
+    <h3 class="lang mr">आवश्यक कागदपत्रे</h3>
+    <h3 class="lang en">Required Documents</h3>
+
+    <ul class="lang mr">
+        <li>जन्म प्रमाणपत्र</li>
+        <li>आधार कार्ड (विद्यार्थी)</li>
+        <li>२ पासपोर्ट साइज फोटो</li>
+        <li>मागील शाळेचा दाखला</li>
+    </ul>
+
+    <ul class="lang en">
+        <li>Birth Certificate</li>
+        <li>Aadhaar Card (Student)</li>
+        <li>2 Passport Size Photographs</li>
+        <li>Previous School Leaving Certificate</li>
+    </ul>
+
+    <!-- TIMINGS -->
+    <h3 class="lang mr">प्रवेश कार्यालय वेळ</h3>
+    <h3 class="lang en">Admission Office Timings</h3>
+
+    <p class="lang mr">
+        सोमवार ते शुक्रवार: सकाळी ९:०० ते दुपारी २:००
+    </p>
+
+    <p class="lang en">
+        Monday to Friday: 9:00 AM to 2:00 PM
+    </p>
+
+    <!-- CONTACT -->
+    <h3 class="lang mr">अधिक माहितीसाठी</h3>
+    <h3 class="lang en">For More Information</h3>
+
+    <p class="lang mr">
+        कृपया शाळेच्या कार्यालयाशी संपर्क साधा किंवा संपर्क पृष्ठाला भेट द्या.
+    </p>
+
+    <p class="lang en">
+        Please contact the school office or visit the Contact page.
+    </p>
 
 </div>
 
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p class="lang mr">© २०२६ आनंद-स्वामी शिक्षण प्रसारक मंडळ. सर्व हक्क राखीव.</p>
+    <p class="lang en">© 2026 Anand-Swami Shikshan Prasarak Mandal. All rights reserved.</p>
+</footer>
+
+<!-- ================= LANGUAGE SCRIPT ================= -->
 <script>
-function setLanguage(lang){localStorage.setItem("language",lang);applyLanguage();}
-function applyLanguage(){
-let lang=localStorage.getItem("language")||"mr";
-document.querySelectorAll(".lang").forEach(el=>{
-el.style.display=el.classList.contains(lang)?"block":"none";
-});}
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+    applyLanguage();
+}
+
+function applyLanguage() {
+    let lang = localStorage.getItem("language") || "mr";
+    document.querySelectorAll(".lang").forEach(el => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+    });
+}
 applyLanguage();
 </script>
 
