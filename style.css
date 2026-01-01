@@ -147,14 +147,22 @@ footer {
 
 /* =================== RESPONSIVE STYLES =================== */
 @media (max-width: 800px) {
-    /* Show hamburger on mobile */
+    /* Show hamburger button on mobile */
     .hamburger {
         display: block;
+        top: 18px;
+        right: 20px; /* keep it separate from language toggle */
+    }
+
+    /* Move language toggle slightly left so it doesn't overlap */
+    .language-switch {
+        top: 18px;
+        right: 80px; /* enough space for hamburger */
     }
 
     /* Stack nav links vertically and hide by default */
     nav {
-        display: none; /* JS toggle will show */
+        display: none; /* JS will toggle this */
         flex-direction: column;
         width: 100%;
         background-color: #0055a5;
@@ -171,3 +179,4 @@ footer {
         width: 100%;
     }
 }
+

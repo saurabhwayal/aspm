@@ -151,6 +151,16 @@ document.querySelectorAll("nav a").forEach(link => {
     }
 });
 </script>
+<script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    if (nav.style.display === "flex") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
+}
+</script>
 
 </body>
 </html>

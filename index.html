@@ -23,7 +23,7 @@
 
     <p class="lang mr">गुणवत्तापूर्ण शिक्षण – उज्ज्वल भविष्य</p>
     <p class="lang en">Quality Education – Bright Future</p>
-    
+
 <div class="hamburger" onclick="toggleMenu()">
     &#9776; <!-- This is the ☰ icon -->
 </div>
@@ -141,6 +141,16 @@ document.querySelectorAll("nav a").forEach(link => {
         link.classList.add("active");
     }
 });
+</script>
+<script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    if (nav.style.display === "flex") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
+}
 </script>
 
 </body>
