@@ -98,3 +98,29 @@ header p {
     border-radius: 6px;
 }
 
+
+.language-switch {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.language-switch button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.language-switch button:hover {
+    background-color: #0066cc;
+}
+
+header {
+    position: relative; /* IMPORTANT */
+}
+
