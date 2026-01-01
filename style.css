@@ -165,4 +165,44 @@ nav a.active {
 nav a {
     transition: all 0.3s ease;
 }
+/* Hamburger button */
+.hamburger {
+    display: none;               /* hidden on desktop */
+    font-size: 28px;             /* size of ☰ icon */
+    cursor: pointer;
+    position: absolute;           /* position it relative to header */
+    top: 18px;
+    right: 60px;                 /* adjust to not overlap language toggle */
+    color: white;
+    z-index: 1001;
+    user-select: none;           /* prevent text selection */
+}
+
+@media (max-width: 800px) {
+    /* Show hamburger button */
+    .hamburger {
+        display: block;
+    }
+
+    /* Make nav vertical and hidden initially */
+    nav {
+        display: none;            /* hidden until toggle */
+        flex-direction: column;   /* stack links vertically */
+        width: 100%;
+        background-color: #0055a5;
+        position: absolute;       /* overlay on page */
+        top: 70px;                /* below header */
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+.hamburger:hover {
+    color: #ffd700;
+}
 
