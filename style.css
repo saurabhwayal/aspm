@@ -103,7 +103,9 @@ header p {
     position: absolute;
     top: 15px;
     right: 20px;
+    z-index: 1000;
 }
+
 
 .language-switch button {
     margin-left: 5px;
@@ -124,3 +126,24 @@ header {
     position: relative; /* IMPORTANT */
 }
 
+nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.language-switch button {
+    display: inline-block;
+}
+
+.language-switch button {
+    background: #003366;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 13px;
+}
