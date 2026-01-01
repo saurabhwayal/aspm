@@ -45,18 +45,26 @@ header {
     position: relative;
 }
 
+/* Logo */
 header img {
-    height: 70px;
+    height: 100px; /* adjust as needed */
+    width: auto;
+    margin-right: 20px;
 }
 
+/* Title section */
 .header-title {
-    text-align: center;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
-header h1, header p {
-    margin: 2px 0;
-    color: white;
+header h1,
+header p {
+    margin: 0;
+    line-height: 1.2;
 }
 
 /* =================== LANGUAGE TOGGLE =================== */
@@ -158,6 +166,7 @@ footer {
     header img {
         order: 1;
         margin-bottom: 5px;
+        height: 80px;
     }
 
     .header-title {
@@ -167,7 +176,7 @@ footer {
         margin-bottom: 5px;
     }
 
-    /* Hamburger next to language toggle */
+    /* Hamburger menu visible on mobile */
     .hamburger {
         display: block;
         position: absolute;
@@ -176,6 +185,7 @@ footer {
         z-index: 1001;
     }
 
+    /* Language toggle top-right, adjusted for hamburger */
     .language-switch {
         position: absolute;
         top: 18px;
