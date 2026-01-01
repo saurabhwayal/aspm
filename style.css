@@ -37,26 +37,36 @@ h2 {
 header {
     background-color: #003366;
     color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative; /* for absolute children like language toggle & hamburger */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-header h1,
-header p {
+header img {
+    height: 70px;
+}
+
+.header-title {
+    text-align: center;
+    flex: 1;
+}
+
+header h1, header p {
+    margin: 2px 0;
     color: white;
 }
 
 /* =================== LANGUAGE TOGGLE =================== */
 .language-switch {
-    position: absolute;
-    top: 15px;
-    right: 20px;
     z-index: 1000;
+    display: flex;
+    gap: 5px;
 }
 
 .language-switch button {
-    margin-left: 5px;
     padding: 5px 12px;
     border: none;
     background-color: #003366;
@@ -79,6 +89,7 @@ nav {
     gap: 25px;
     background-color: #0055a5;
     padding: 10px 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -102,21 +113,13 @@ nav a.active {
     padding-bottom: 5px;
 }
 
-/* =================== HAMBURGER MENU =================== */
+/* =================== HAMBURGER =================== */
 .hamburger {
     display: none; /* hidden on desktop */
     font-size: 28px;
     cursor: pointer;
-    position: absolute;
-    top: 18px;
-    right: 60px; /* adjust if needed next to language toggle */
     color: white;
-    z-index: 1001;
     user-select: none;
-}
-
-.hamburger:hover {
-    color: #ffd700;
 }
 
 /* =================== GALLERY =================== */
@@ -145,29 +148,48 @@ footer {
     display: none;
 }
 
-/* =================== RESPONSIVE STYLES =================== */
+/* =================== RESPONSIVE (MOBILE) =================== */
 @media (max-width: 800px) {
-    /* Show hamburger button on mobile */
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header img {
+        order: 1;
+        margin-bottom: 5px;
+    }
+
+    .header-title {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    /* Hamburger next to language toggle */
     .hamburger {
         display: block;
+        position: absolute;
         top: 18px;
-        right: 20px; /* keep it separate from language toggle */
+        right: 20px;
+        z-index: 1001;
     }
 
-    /* Move language toggle slightly left so it doesn't overlap */
     .language-switch {
+        position: absolute;
         top: 18px;
-        right: 80px; /* enough space for hamburger */
+        right: 60px; /* space for hamburger */
     }
 
-    /* Stack nav links vertically and hide by default */
+    /* Nav hidden by default, vertical layout */
     nav {
-        display: none; /* JS will toggle this */
+        display: none; /* JS toggles it */
         flex-direction: column;
         width: 100%;
         background-color: #0055a5;
         position: absolute;
-        top: 70px; /* below header */
+        top: 80px; /* below header */
         left: 0;
         padding: 10px 0;
         z-index: 1000;
@@ -180,3 +202,22 @@ footer {
     }
 }
 
+/* Extra small screens (<400px) */
+@media (max-width: 400px) {
+    header img {
+        height: 60px;
+    }
+
+    .language-switch {
+        right: 70px;
+    }
+
+    .hamburger {
+        right: 20px;
+    }
+}
+
+/* =================== TRANSITIONS =================== */
+nav a, .language-switch button {
+    transition: all 0.3s ease;
+}

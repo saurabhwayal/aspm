@@ -1,147 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Anand-Swami Shikshan Prasarak Mandal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Anand-Swami Shikshan Prasarak Mandal – Quality education in a safe and nurturing environment.">
+    <meta charset="UTF-8">
+    <title>Home - Anand-Swami Shikshan Prasarak Mandal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
+    <img src="images/logo.png" alt="School Logo">
+
+    <div class="header-title">
+        <h1 class="lang mr">आनंद-स्वामी शिक्षण प्रसारक मंडळ</h1>
+        <h1 class="lang en">Anand-Swami Shikshan Prasarak Mandal</h1>
+        <p class="lang mr">गुणवत्तापूर्ण शिक्षण – उज्ज्वल भविष्य</p>
+        <p class="lang en">Quality Education – Bright Future</p>
+    </div>
+
     <div class="language-switch">
-    <button onclick="setLanguage('mr')">मराठी</button>
-    <button onclick="setLanguage('en')">English</button>
-</div>
+        <button onclick="setLanguage('mr')">मराठी</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
 
-<img src="images/logo.png" alt="School Logo" style="height:80px;">
-
-    <h1 class="lang mr">आनंद-स्वामी शिक्षण प्रसारक मंडळ</h1>
-    <h1 class="lang en">Anand-Swami Shikshan Prasarak Mandal</h1>
-
-    <p class="lang mr">गुणवत्तापूर्ण शिक्षण – उज्ज्वल भविष्य</p>
-    <p class="lang en">Quality Education – Bright Future</p>
-
-<div class="hamburger" onclick="toggleMenu()">
-    &#9776; <!-- This is the ☰ icon -->
-</div>
-
-    
+    <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
 </header>
 
-<!-- ================= NAVIGATION ================= -->
 <nav>
-   <a href="index.html">
-    <span class="lang mr">मुख्यपृष्ठ</span>
-    <span class="lang en">Home</span>
-</a>
-
-<a href="about.html">
-    <span class="lang mr">शाळेबद्दल</span>
-    <span class="lang en">About</span>
-</a>
-
-<a href="admissions.html">
-    <span class="lang mr">प्रवेश</span>
-    <span class="lang en">Admissions</span>
-</a>
-
-<a href="gallery.html">
-    <span class="lang mr">छायाचित्रे</span>
-    <span class="lang en">Gallery</span>
-</a>
-
-<a href="contact.html">
-    <span class="lang mr">संपर्क</span>
-    <span class="lang en">Contact</span>
-</a>
-
+    <a href="index.html"><span class="lang mr">मुख्यपृष्ठ</span><span class="lang en">Home</span></a>
+    <a href="about.html"><span class="lang mr">शाळेबद्दल</span><span class="lang en">About</span></a>
+    <a href="admissions.html"><span class="lang mr">प्रवेश</span><span class="lang en">Admissions</span></a>
+    <a href="gallery.html"><span class="lang mr">छायाचित्रे</span><span class="lang en">Gallery</span></a>
+    <a href="contact.html"><span class="lang mr">संपर्क</span><span class="lang en">Contact</span></a>
 </nav>
 
-<!-- ================= MAIN CONTENT ================= -->
 <div class="container">
-
-    <!-- WELCOME -->
-    <h2 class="lang mr">आनंद-स्वामी शिक्षण प्रसारक मंडळमध्ये आपले स्वागत आहे</h2>
-    <h2 class="lang en">Welcome to Anand-Swami Shikshan Prasarak Mandal</h2>
+    <h2 class="lang mr">मुख्यपृष्ठ</h2>
+    <h2 class="lang en">Home</h2>
 
     <p class="lang mr">
-        " आनंद-स्वामी शिक्षण प्रसारक मंडळ " ही विद्यार्थ्यांच्या सर्वांगीण विकासासाठी समर्पित शैक्षणिक संस्था आहे.
-        आम्ही दर्जेदार शिक्षण, शिस्त आणि संस्कार यांना महत्त्व देतो.
+        येथे आनंद-स्वामी शिक्षण प्रसारक मंडळात आपले स्वागत आहे.  
+        आमचा उद्देश गुणवत्तापूर्ण शिक्षण आणि उज्ज्वल भविष्य देणे आहे.
     </p>
-
     <p class="lang en">
-        " Anand-Swami Shikshan Prasarak Mandal " is dedicated to the overall development of students.
-        We focus on quality education, discipline, and values.
+        Welcome to Anand-Swami Shikshan Prasarak Mandal.  
+        Our aim is to provide quality education and a bright future.
     </p>
 
-    <!-- FEATURES -->
-    <h3 class="lang mr">आमची वैशिष्ट्ये</h3>
-    <h3 class="lang en">Our Features</h3>
+    <!-- Example: Map / Address -->
+    <h3 class="lang mr">पत्ता</h3>
+    <h3 class="lang en">Address</h3>
+    <p class="lang mr">123, मुख्य रस्ता, अमरावती, महाराष्ट्र, भारत</p>
+    <p class="lang en">123, Main Road, Amravati, Maharashtra, India</p>
 
-    <ul class="lang mr">
-        <li>अनुभवी व प्रशिक्षित शिक्षकवर्ग</li>
-        <li>सुसज्ज वर्गखोल्या</li>
-        <li>सुरक्षित व शिस्तबद्ध परिसर</li>
-        <li>सहशालेय उपक्रम</li>
-    </ul>
-
-    <ul class="lang en">
-        <li>Experienced and trained teachers</li>
-        <li>Well-equipped classrooms</li>
-        <li>Safe and disciplined campus</li>
-        <li>Co-curricular activities</li>
-    </ul>
-
-    <!-- PRINCIPAL MESSAGE -->
-    <h3 class="lang mr">मुख्याध्यापकांचा संदेश</h3>
-    <h3 class="lang en">Principal’s Message</h3>
-
-    <p class="lang mr">
-        विद्यार्थ्यांचा सर्वांगीण विकास हाच आमचा मुख्य उद्देश आहे.
-        प्रत्येक विद्यार्थ्याच्या यशासाठी आम्ही कटिबद्ध आहोत.
-    </p>
-
-    <p class="lang en">
-        Our goal is the holistic development of every student.
-        We are committed to nurturing future-ready citizens.
-    </p>
-
+    <div class="gallery-grid">
+        <img src="images/school1.jpg" alt="School Image 1">
+        <img src="images/school2.jpg" alt="School Image 2">
+        <img src="images/school3.jpg" alt="School Image 3">
+    </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
 <footer>
-    <p class="lang mr">© २०२६ आनंद-स्वामी शिक्षण प्रसारक मंडळ. सर्व हक्क राखीव.</p>
-    <p class="lang en">© 2026 Anand-Swami Shikshan Prasarak Mandal. All rights reserved.</p>
+    © 2026 Anand-Swami Shikshan Prasarak Mandal
 </footer>
 
-<!-- ================= LANGUAGE SCRIPT ================= -->
+<!-- LANGUAGE TOGGLE SCRIPT -->
 <script>
 function setLanguage(lang) {
     localStorage.setItem("language", lang);
-    applyLanguage();
-}
-
-function applyLanguage() {
-    let lang = localStorage.getItem("language") || "mr";
     document.querySelectorAll(".lang").forEach(el => {
         el.style.display = el.classList.contains(lang) ? "block" : "none";
     });
 }
+function applyLanguage() {
+    const lang = localStorage.getItem("language") || "en";
+    setLanguage(lang);
+}
 applyLanguage();
 </script>
-<script>
-/* ===== Highlight Active Menu ===== */
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-document.querySelectorAll("nav a").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-    }
-});
-</script>
+<!-- HAMBURGER TOGGLE -->
 <script>
 function toggleMenu() {
     const nav = document.querySelector("nav");
@@ -151,6 +88,16 @@ function toggleMenu() {
         nav.style.display = "flex";
     }
 }
+</script>
+
+<!-- ACTIVE TAB HIGHLIGHT -->
+<script>
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll("nav a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
 </script>
 
 </body>
