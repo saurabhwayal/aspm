@@ -157,3 +157,12 @@ nav a {
     justify-content: center;
     white-space: nowrap;
 }
+nav a.active {
+    color: #ffd700;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 5px;
+}
+nav a {
+    transition: all 0.3s ease;
+}
+
