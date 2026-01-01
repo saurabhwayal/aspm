@@ -1,5 +1,7 @@
+/* =================== GOOGLE FONT =================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* =================== BODY & GENERAL =================== */
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
@@ -7,69 +9,22 @@ body {
     background-color: #f4f6f8;
 }
 
-
-header {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-    text-align: center;
+h1, h2, h3 {
+    color: #003366;
+    margin: 0;
 }
 
-nav {
-    background-color: #0055a5;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #ffd700;
-}
-
-
-.container {
-    padding: 20px;
-}
-
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 10px 0;
-    }
+h2 {
+    margin-top: 0;
 }
 
 .container {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 20px;
     margin: 20px auto;
     max-width: 1100px;
-}
-h1, h2, h3 {
-    color: #003366;
-}
-
-h2 {
-    margin-top: 0;
-}
-.container {
     animation: fadeIn 0.6s ease-in;
 }
 
@@ -78,11 +33,93 @@ h2 {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* =================== HEADER =================== */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* for absolute children like language toggle & hamburger */
+}
+
 header h1,
 header p {
     color: white;
 }
-.lang { display: none; }
+
+/* =================== LANGUAGE TOGGLE =================== */
+.language-switch {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.language-switch button {
+    margin-left: 5px;
+    padding: 5px 12px;
+    border: none;
+    background-color: #003366;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.language-switch button:hover {
+    background-color: #0066cc;
+}
+
+/* =================== NAVIGATION =================== */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #0055a5;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+nav a.active {
+    color: #ffd700;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 5px;
+}
+
+/* =================== HAMBURGER MENU =================== */
+.hamburger {
+    display: none; /* hidden on desktop */
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 60px; /* adjust if needed next to language toggle */
+    color: white;
+    z-index: 1001;
+    user-select: none;
+}
+
+.hamburger:hover {
+    color: #ffd700;
+}
+
+/* =================== GALLERY =================== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -94,106 +131,38 @@ header p {
     border-radius: 6px;
 }
 
-
-.language-switch {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1000;
-}
-
-
-.language-switch button {
-    margin-left: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #004080;
+/* =================== FOOTER =================== */
+footer {
+    background-color: #003366;
     color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-.language-switch button:hover {
-    background-color: #0066cc;
+/* =================== HIDDEN LANGUAGE =================== */
+.lang {
+    display: none;
 }
 
-header {
-    position: relative; /* IMPORTANT */
-}
-
-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.language-switch button {
-    display: inline-block;
-}
-
-.language-switch button {
-    background: #003366;
-    color: white;
-    border-radius: 20px;
-    padding: 5px 12px;
-    font-size: 13px;
-}
-/* ===== FORCE HORIZONTAL NAVIGATION ===== */
-nav {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-nav a {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-}
-nav a.active {
-    color: #ffd700;
-    border-bottom: 3px solid #ffd700;
-    padding-bottom: 5px;
-}
-nav a {
-    transition: all 0.3s ease;
-}
-/* Hamburger button */
-.hamburger {
-    display: none;               /* hidden on desktop */
-    font-size: 28px;             /* size of ☰ icon */
-    cursor: pointer;
-    position: absolute;           /* position it relative to header */
-    top: 18px;
-    right: 60px;                 /* adjust to not overlap language toggle */
-    color: white;
-    z-index: 1001;
-    user-select: none;           /* prevent text selection */
-}
-
+/* =================== RESPONSIVE STYLES =================== */
 @media (max-width: 800px) {
-    /* Show hamburger button */
+    /* Show hamburger on mobile */
     .hamburger {
         display: block;
     }
 
-    /* Make nav vertical and hidden initially */
+    /* Stack nav links vertically and hide by default */
     nav {
-        display: none;            /* hidden until toggle */
-        flex-direction: column;   /* stack links vertically */
+        display: none; /* JS toggle will show */
+        flex-direction: column;
         width: 100%;
         background-color: #0055a5;
-        position: absolute;       /* overlay on page */
-        top: 70px;                /* below header */
+        position: absolute;
+        top: 70px; /* below header */
         left: 0;
         padding: 10px 0;
+        z-index: 1000;
     }
 
     nav a {
@@ -202,7 +171,3 @@ nav a {
         width: 100%;
     }
 }
-.hamburger:hover {
-    color: #ffd700;
-}
-
