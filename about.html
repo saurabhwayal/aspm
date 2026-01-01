@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 class="lang mr">शाळेबद्दल</h1>
+    <h1 class="lang en">About Our School</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<p class="lang mr">
+आदर्श पब्लिक स्कूल ही गुणवत्तापूर्ण शिक्षण देणारी संस्था आहे.
+</p>
+
+<p class="lang en">
+Adarsh Public School is an institution committed to quality education.
+</p>
+
+</div>
+
+<script>
+function setLanguage(lang){localStorage.setItem("language",lang);applyLanguage();}
+function applyLanguage(){
+let lang=localStorage.getItem("language")||"mr";
+document.querySelectorAll(".lang").forEach(el=>{
+el.style.display=el.classList.contains(lang)?"block":"none";
+});}
+applyLanguage();
+</script>
+
+</body>
+</html>

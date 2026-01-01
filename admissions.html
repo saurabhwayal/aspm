@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admissions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1 class="lang mr">प्रवेश माहिती</h1>
+<h1 class="lang en">Admissions</h1>
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="admissions.html">Admissions</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<p class="lang mr">शैक्षणिक वर्ष २०२६–२७ साठी प्रवेश सुरू आहेत.</p>
+<p class="lang en">Admissions are open for the academic year 2026–27.</p>
+
+</div>
+
+<script>
+function setLanguage(lang){localStorage.setItem("language",lang);applyLanguage();}
+function applyLanguage(){
+let lang=localStorage.getItem("language")||"mr";
+document.querySelectorAll(".lang").forEach(el=>{
+el.style.display=el.classList.contains(lang)?"block":"none";
+});}
+applyLanguage();
+</script>
+
+</body>
+</html>

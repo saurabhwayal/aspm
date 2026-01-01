@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Adarsh Public School</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Adarsh Public School provides quality education in a safe and caring environment.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="images/logo.png" alt="School Logo" style="height:80px;">
+
+    <h1 class="lang mr">आदर्श पब्लिक स्कूल</h1>
+    <h1 class="lang en">Adarsh Public School</h1>
+
+    <p class="lang mr">गुणवत्तापूर्ण शिक्षण – उज्ज्वल भविष्य</p>
+    <p class="lang en">Quality Education – Bright Future</p>
+
+    <div style="margin-top:10px;">
+        <button onclick="setLanguage('mr')">मराठी</button>
+        <button onclick="setLanguage('en')">English</button>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home / मुख्यपृष्ठ</a>
+    <a href="about.html">About / शाळेबद्दल</a>
+    <a href="admissions.html">Admissions / प्रवेश</a>
+    <a href="gallery.html">Gallery / छायाचित्रे</a>
+    <a href="contact.html">Contact / संपर्क</a>
+</nav>
+
+<div class="container">
+
+    <h2 class="lang mr">शाळेत आपले स्वागत आहे</h2>
+    <h2 class="lang en">Welcome to Our School</h2>
+
+    <p class="lang mr">
+        आदर्श पब्लिक स्कूल ही विद्यार्थ्यांच्या सर्वांगीण विकासासाठी समर्पित शैक्षणिक संस्था आहे.
+    </p>
+
+    <p class="lang en">
+        Adarsh Public School is dedicated to the overall development of students.
+    </p>
+
+    <h3 class="lang mr">आमची वैशिष्ट्ये</h3>
+    <h3 class="lang en">Why Choose Us</h3>
+
+    <ul class="lang mr">
+        <li>अनुभवी शिक्षकवर्ग</li>
+        <li>सुसज्ज वर्गखोल्या</li>
+        <li>सुरक्षित शालेय परिसर</li>
+    </ul>
+
+    <ul class="lang en">
+        <li>Experienced Teachers</li>
+        <li>Modern Classrooms</li>
+        <li>Safe School Campus</li>
+    </ul>
+
+</div>
+
+<footer>
+    <p class="lang mr">© २०२६ आदर्श पब्लिक स्कूल. सर्व हक्क राखीव.</p>
+    <p class="lang en">© 2026 Adarsh Public School. All rights reserved.</p>
+</footer>
+
+<script>
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+    applyLanguage();
+}
+function applyLanguage() {
+    let lang = localStorage.getItem("language") || "mr";
+    document.querySelectorAll(".lang").forEach(el => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+    });
+}
+applyLanguage();
+</script>
+
+</body>
+</html>
